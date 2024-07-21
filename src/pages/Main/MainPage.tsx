@@ -1,26 +1,28 @@
-import { FC } from 'react'
-import { Container, ContentContainer, ContentInput, LogoWrapper, Root, SubmitButton, TitleTypo } from './styled'
+import { Root } from 'components/Root'
+import { useUserProfile } from 'hooks/useUserProfile'
+import { FC, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { TitleTypo, TitleTypoWrapper } from './styled'
 
 type MainPageProps = {
   className?: string
 }
 
 export const MainPage: FC<MainPageProps> = ({ className }) => {
+  const navigate = useNavigate()
+  const { isLogin } = useUserProfile()
+
+  useEffect(() => {
+    if (isLogin === false) {
+      navigate('/user/login')
+    }
+  }, [])
+
   return (
     <Root className={className}>
-      <Container>
-        <LogoWrapper>
-          <TitleTypo>
-            우리끼리 <br /> 딜리버리
-          </TitleTypo>
-        </LogoWrapper>
-        <ContentContainer>
-          <ContentInput placeholder="아이디를 입력해주세요." />
-          <ContentInput placeholder="비밀번호를 입력해주세요." />
-          <SubmitButton type={'primary'}>로그인</SubmitButton>
-          <SubmitButton>회원가입</SubmitButton>
-        </ContentContainer>
-      </Container>
+      <TitleTypoWrapper>
+        <TitleTypo>우리끼리 딜리버리</TitleTypo>
+      </TitleTypoWrapper>
     </Root>
   )
 }

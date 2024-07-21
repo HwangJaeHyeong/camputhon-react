@@ -4,7 +4,7 @@
     "prefix": "rfc",
     "body": [
       "import { FC } from 'react'",
-      "import { Root } from './styled'",
+      "import { Root } from 'components/Root'",
       "",
       "type ${TM_FILENAME_BASE}$1Props = {",
       "  className?: string",
@@ -33,7 +33,7 @@
   "react-styled-components-skeleton": {
     "scope": "typescript",
     "prefix": "rsc",
-    "body": ["import styled from 'styled-components'", "", "export const Root = styled.div``"]
+    "body": ["import styled from 'styled-components'", "", "export const Container = styled.div``"]
   },
   "api-query-skeleton": {
     "scope": "typescript",
