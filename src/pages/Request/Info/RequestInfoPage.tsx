@@ -84,6 +84,22 @@ export const RequestInfoPage: FC<RequestInfoPageProps> = ({ className }) => {
             </ContentInputWrapper>
           </ContentInputContainer>
           <ContentInputContainer>
+            <ContentInputTitleTypo>상품 금액</ContentInputTitleTypo>
+            <ContentInputWrapper>
+              <ContentSelect
+                showSearch
+                placeholder="상품 금액을 선택해주세요."
+                options={[
+                  { label: '1,000원', value: '1,000원' },
+                  { label: '1,500원', value: '1,500원' },
+                  { label: '2,000원', value: '2,000원' },
+                  { label: '2,500원', value: '2,500원' },
+                  { label: '3,000원', value: '3,000원' },
+                ]}
+              />
+            </ContentInputWrapper>
+          </ContentInputContainer>
+          <ContentInputContainer>
             <ContentInputTitleTypo>배달 금액</ContentInputTitleTypo>
             <ContentInputWrapper>
               <ContentSelect
