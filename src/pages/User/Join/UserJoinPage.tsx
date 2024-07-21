@@ -1,5 +1,5 @@
+import { Root } from 'components/Root'
 import { FC } from 'react'
-import { Root } from './styled'
 
 type UserJoinPageProps = {
   className?: string
