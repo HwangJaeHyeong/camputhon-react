@@ -24,7 +24,7 @@ export const TabBar: FC<TabBarProps> = ({ className }) => {
         <ItemTypo>Search</ItemTypo>
       </ItemContainer>
       <ItemContainer>
-        <ItemIcon src={deliverySvgImg} />
+        <ItemIcon src={deliverySvgImg} style={{ marginTop: 5 }} />
         <ItemTypo>Delivery</ItemTypo>
       </ItemContainer>
       <ItemContainer>
