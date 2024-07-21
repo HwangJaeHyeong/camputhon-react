@@ -1,4 +1,5 @@
 import { Root } from 'components/Root'
+import { TabBar } from 'components/TabBar'
 import { useUserProfile } from 'hooks/useUserProfile'
 import { FC, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -23,6 +24,7 @@ export const MainPage: FC<MainPageProps> = ({ className }) => {
       <TitleTypoWrapper>
         <TitleTypo>우리끼리 딜리버리</TitleTypo>
       </TitleTypoWrapper>
+      <TabBar />
     </Root>
   )
 }
