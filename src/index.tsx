@@ -3,6 +3,7 @@ import 'antd/dist/reset.css'
 import { PRIMARY_COLOR } from 'constants/system/default'
 import { MainPage } from 'pages/Main'
 import { UserJoinPage } from 'pages/User/Join'
+import { UserLoginPage } from 'pages/User/Login'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
@@ -24,6 +25,7 @@ root.render(
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/user/join" element={<UserJoinPage />} />
+          <Route path="/user/login" element={<UserLoginPage />} />
         </Routes>
       </BrowserRouter>
     </ConfigProvider>
