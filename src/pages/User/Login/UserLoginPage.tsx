@@ -1,8 +1,23 @@
 import { Root } from 'components/Root'
+import designElement01Img from 'constants/images/design_element_01.png'
+import designElement02Img from 'constants/images/design_element_02.png'
+import designElement03Img from 'constants/images/design_element_03.png'
+import logoSmallImg from 'constants/images/logo_main.png'
 import { useUserProfile } from 'hooks/useUserProfile'
 import { FC, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ContentContainer, ContentInput, LogoWrapper, SubmitButton, TitleTypo } from './styled'
+import {
+  ContentContainer,
+  ContentElement01Img,
+  ContentElement02Img,
+  ContentElement03Img,
+  ContentElementContainer,
+  ContentElementTypo,
+  ContentInput,
+  LogoImg,
+  LogoImgWrapper,
+  SubmitButton,
+} from './styled'
 
 type UserLoginPageProps = {
   className?: string
@@ -30,11 +45,20 @@ export const UserLoginPage: FC<UserLoginPageProps> = ({ className }) => {
 
   return (
     <Root className={className}>
-      <LogoWrapper>
-        <TitleTypo>
-          우리끼리 <br /> 딜리버리
-        </TitleTypo>
-      </LogoWrapper>
+      <LogoImgWrapper>
+        <LogoImg src={logoSmallImg} alt={'logo small'} />
+      </LogoImgWrapper>
+      <ContentElementContainer>
+        <ContentElement01Img src={designElement01Img} alt={'design_element_01_img'} />
+        <ContentElement02Img src={designElement02Img} alt={'design_element_02_img'} />
+        <ContentElement03Img src={designElement03Img} alt={'design_element_03_img'} />
+        <ContentElementTypo>
+          애매한 공강시간...
+          <br />
+          쉽고 빠르게 돈을 벌어보세요!
+          <br /> 어디서든 필요한 물건을 받아보세요!
+        </ContentElementTypo>
+      </ContentElementContainer>
       <ContentContainer>
         <ContentInput placeholder="아이디를 입력해주세요." value={email} onChange={(e) => setEmail(e.target.value)} />
         <ContentInput

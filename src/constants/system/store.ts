@@ -1,0 +1,17 @@
+export const STORE_LIST = [
+  { label: '김치만', value: '김치만' },
+  { label: '스트렝스', value: '스트렝스' },
+  { label: '커피빈', value: '커피빈' },
+  { label: '한솥', value: '한솥' },
+  { label: '바나프레소', value: '바나프레소' },
+  { label: '이디야', value: '이디야' },
+  { label: '탕화쿵푸 마라탕', value: '탕화쿵푸 마라탕' },
+  { label: '남산흑소', value: '남산흑소' },
+  { label: '영동골방', value: '영동골방' },
+  { label: '진미식당', value: '진미식당' },
+  { label: '김가네', value: '김가네' },
+  { label: '필동면옥', value: '필동면옥' },
+  { label: '산타돈부리', value: '산타돈부리' },
+  { label: '눈내리는집', value: '눈내리는집' },
+  { label: '필로프', value: '필로프' },
+]

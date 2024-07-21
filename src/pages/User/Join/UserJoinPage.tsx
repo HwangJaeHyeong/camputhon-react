@@ -30,6 +30,10 @@ export const UserJoinPage: FC<UserJoinPageProps> = ({ className }) => {
     navigate('/user/login')
   }
 
+  const handleSchedule = (value: any) => {
+    setSchedule(value)
+  }
+
   return (
     <Root className={className}>
       <Container>
@@ -79,13 +83,11 @@ export const UserJoinPage: FC<UserJoinPageProps> = ({ className }) => {
                 numDays={5}
                 minTime={9}
                 maxTime={22}
-                onChange={(value) => setSchedule(value)}
+                onChange={handleSchedule}
                 hoveredColor={PRIMARY_COLOR_2}
                 renderDateLabel={(date) => {
-                  const now = dayjs(date).day()
-
+                  const now = dayjs(date).day() - 1
                   const weekList = ['월', '화', '수', '목', '금']
-
                   return <ScheduleSelectorTypo>{`${weekList[now]}요일`}</ScheduleSelectorTypo>
                 }}
               />
