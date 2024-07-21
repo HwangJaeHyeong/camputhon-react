@@ -21,3 +21,41 @@ export const TitleTypo = styled(Typography)`
   letter-spacing: -1px;
   margin-top: 10px;
 `
+
+export const LogoImg = styled.img`
+  width: 160px;
+`
+
+export const SectionContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+`
+
+export const SectionTitleTypoWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
+export const SectionTitleTypo = styled(Typography)`
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+`
+
+export const SectionTitleMoreTypo = styled(Typography)`
+  font-size: 16px;
+  color: #777;
+`
+export const SectionContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+`
