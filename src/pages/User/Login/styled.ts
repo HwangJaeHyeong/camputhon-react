@@ -15,7 +15,7 @@ export const LogoImgWrapper = styled.div`
 `
 
 export const LogoImg = styled.img`
-  width: 300px;
+  width: 320px;
 `
 
 export const ContentContainer = styled.div`
