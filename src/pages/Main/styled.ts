@@ -19,7 +19,12 @@ export const TitleTypo = styled(Typography)`
   color: #333;
   line-height: 120%;
   letter-spacing: -1px;
-  margin-top: 10px;
+  margin-top: 20px;
+`
+
+export const SubtitleTypo = styled(Typography)`
+  font-size: 16px;
+  color: #777;
 `
 
 export const LogoImg = styled.img`
@@ -44,13 +49,13 @@ export const SectionTitleTypoWrapper = styled.div`
 `
 
 export const SectionTitleTypo = styled(Typography)`
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: 500;
   color: #333;
 `
 
 export const SectionTitleMoreTypo = styled(Typography)`
-  font-size: 16px;
+  font-size: 12px;
   color: #777;
 `
 export const SectionContentContainer = styled.div`
@@ -58,4 +63,10 @@ export const SectionContentContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 10px;
+`
+
+export const SectionMapImg = styled.img`
+  width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
 `

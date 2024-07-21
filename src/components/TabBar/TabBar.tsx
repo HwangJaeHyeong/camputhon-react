@@ -3,6 +3,7 @@ import deliverySvgImg from 'constants/icons/delivery.svg'
 import homeSvgImg from 'constants/icons/home.svg'
 import mypageSvgImg from 'constants/icons/mypage.svg'
 import searchSvgImg from 'constants/icons/search.svg'
+import { MOBILE_MAX_WIDTH, MOBILE_MIN_WIDTH } from 'constants/system/default'
 import { FC } from 'react'
 import { ReactSVG } from 'react-svg'
 import styled from 'styled-components'
@@ -36,12 +37,16 @@ export const TabBar: FC<TabBarProps> = ({ className }) => {
 
 const Root = styled.div`
   width: 100%;
+  max-width: ${MOBILE_MAX_WIDTH}px;
+  min-width: ${MOBILE_MIN_WIDTH}px;
   height: 64px;
+  background: #fff;
   display: flex;
   justify-content: space-between;
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
   border-top: 2px #eee solid;
   z-index: 10;
 `
