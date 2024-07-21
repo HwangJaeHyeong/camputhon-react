@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Container, ContentContainer, ContentInput, LogoWrapper, Root, SubmitButton, TitleTypo } from './styled'
 
 type MainPageProps = {
@@ -6,6 +7,15 @@ type MainPageProps = {
 }
 
 export const MainPage: FC<MainPageProps> = ({ className }) => {
+  const navigate = useNavigate()
+
+  const onClickLoginButton = () => {
+    navigate('/')
+  }
+  const onClickJoinButton = () => {
+    navigate('/user/join')
+  }
+
   return (
     <Root className={className}>
       <Container>
@@ -17,8 +27,10 @@ export const MainPage: FC<MainPageProps> = ({ className }) => {
         <ContentContainer>
           <ContentInput placeholder="아이디를 입력해주세요." />
           <ContentInput placeholder="비밀번호를 입력해주세요." />
-          <SubmitButton type={'primary'}>로그인</SubmitButton>
-          <SubmitButton>회원가입</SubmitButton>
+          <SubmitButton type={'primary'} onClick={onClickLoginButton}>
+            로그인
+          </SubmitButton>
+          <SubmitButton onClick={onClickJoinButton}>회원가입</SubmitButton>
         </ContentContainer>
       </Container>
     </Root>
