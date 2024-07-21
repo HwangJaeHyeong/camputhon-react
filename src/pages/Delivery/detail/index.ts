@@ -1,0 +1,1 @@
+export { DeliveryDetailPage } from './DeliveryDetailPage'
