@@ -1,7 +1,8 @@
 import { ConfigProvider } from 'antd'
 import 'antd/dist/reset.css'
 import { PRIMARY_COLOR } from 'constants/system/default'
-import { DeliveryDetailPage } from 'pages/Delivery/detail'
+import { DeliveryDetailPage } from 'pages/Delivery/Detail'
+import { DeliveryListPage } from 'pages/Delivery/List'
 import { MainPage } from 'pages/Main'
 import { RequestInfoPage } from 'pages/Request/Info'
 import { UserJoinPage } from 'pages/User/Join'
@@ -29,6 +30,7 @@ root.render(
           <Route path="/user/join" element={<UserJoinPage />} />
           <Route path="/user/login" element={<UserLoginPage />} />
           <Route path="/request/info" element={<RequestInfoPage />} />
+          <Route path="/delivery/list" element={<DeliveryListPage />} />
           <Route path="/delivery/detail" element={<DeliveryDetailPage />} />
         </Routes>
       </BrowserRouter>
