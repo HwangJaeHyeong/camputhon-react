@@ -1,6 +1,6 @@
 import { Root } from 'components/Root'
 import { useUserProfile } from 'hooks/useUserProfile'
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { TitleTypo, TitleTypoWrapper } from './styled'
 
@@ -10,7 +10,13 @@ type MainPageProps = {
 
 export const MainPage: FC<MainPageProps> = ({ className }) => {
   const navigate = useNavigate()
-  const { setAccessToken } = useUserProfile()
+  const { isLogin } = useUserProfile()
+
+  useEffect(() => {
+    if (!isLogin) {
+      navigate('/user/login')
+    }
+  }, [])
 
   return (
     <Root className={className}>
