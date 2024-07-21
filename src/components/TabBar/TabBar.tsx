@@ -5,6 +5,7 @@ import mypageSvgImg from 'constants/icons/mypage.svg'
 import searchSvgImg from 'constants/icons/search.svg'
 import { MOBILE_MAX_WIDTH, MOBILE_MIN_WIDTH } from 'constants/system/default'
 import { FC } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { ReactSVG } from 'react-svg'
 import styled from 'styled-components'
 
@@ -13,9 +14,16 @@ type TabBarProps = {
 }
 
 export const TabBar: FC<TabBarProps> = ({ className }) => {
+  const navigate = useNavigate()
+
+  const onClickHomeButton = () => {
+    navigate('/')
+    return
+  }
+
   return (
     <Root className={className}>
-      <ItemContainer>
+      <ItemContainer onClick={onClickHomeButton}>
         <ItemIcon src={homeSvgImg} />
         <ItemTypo>Home</ItemTypo>
       </ItemContainer>
