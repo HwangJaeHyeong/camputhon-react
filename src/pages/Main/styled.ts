@@ -1,4 +1,4 @@
-import { Typography } from 'antd'
+import { Button, Typography } from 'antd'
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -69,4 +69,8 @@ export const SectionMapImg = styled.img`
   width: 100%;
   object-fit: contain;
   border-radius: 8px;
+`
+
+export const SectionButton = styled(Button)`
+  width: 100%;
 `

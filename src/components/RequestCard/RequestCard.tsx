@@ -1,4 +1,3 @@
-import designCard01Img from 'constants/images/design_card_01.png'
 import { FC } from 'react'
 import {
   Container,
@@ -68,6 +67,7 @@ export const RequestCard: FC<RequestCardProps> = ({
   price,
   level,
   category,
+  src,
   isRecommended = false,
 }) => {
   const categoryList = [level, ...category]
@@ -76,7 +76,7 @@ export const RequestCard: FC<RequestCardProps> = ({
     <Root className={className}>
       <Container>
         <TitleContainer>
-          <ProfileImg src={designCard01Img} alt={'design card 01 image'} />
+          <ProfileImg src={src} alt={'design card 01 image'} />
           <TitleTypo>
             {storeName} {'<=>'} {destination}
           </TitleTypo>

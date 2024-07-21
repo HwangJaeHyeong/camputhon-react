@@ -10,6 +10,7 @@ import { FC, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   LogoImg,
+  SectionButton,
   SectionContainer,
   SectionContentContainer,
   SectionMapImg,
@@ -35,6 +36,10 @@ export const MainPage: FC<MainPageProps> = ({ className }) => {
     }
   }, [])
 
+  const onClickRequestButton = () => {
+    navigate('/request/info')
+  }
+
   return (
     <Root className={className}>
       <TitleTypoWrapper>
@@ -44,10 +49,13 @@ export const MainPage: FC<MainPageProps> = ({ className }) => {
       </TitleTypoWrapper>
       <SectionContainer>
         <SectionTitleTypoWrapper>
-          <SectionTitleTypo>배달 요청하기</SectionTitleTypo>
+          <SectionTitleTypo>내 주변 파트너</SectionTitleTypo>
         </SectionTitleTypoWrapper>
         <SectionContentContainer>
           <SectionMapImg src={designElement04Img} alt={'design element 04 image'} />
+          <SectionButton type={'primary'} size={'large'} onClick={onClickRequestButton}>
+            배달 요청하기
+          </SectionButton>
         </SectionContentContainer>
       </SectionContainer>
       <SectionContainer>
