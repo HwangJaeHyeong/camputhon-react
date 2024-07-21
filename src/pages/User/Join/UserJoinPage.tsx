@@ -86,7 +86,7 @@ export const UserJoinPage: FC<UserJoinPageProps> = ({ className }) => {
                 onChange={handleSchedule}
                 hoveredColor={PRIMARY_COLOR_2}
                 renderDateLabel={(date) => {
-                  const now = dayjs(date).day()
+                  const now = dayjs(date).day() - 1
                   const weekList = ['월', '화', '수', '목', '금']
                   return <ScheduleSelectorTypo>{`${weekList[now]}요일`}</ScheduleSelectorTypo>
                 }}

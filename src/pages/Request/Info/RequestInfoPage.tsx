@@ -40,7 +40,20 @@ export const RequestInfoPage: FC<RequestInfoPageProps> = ({ className }) => {
           <ContentInputContainer>
             <ContentInputTitleTypo>목적지 선택하기</ContentInputTitleTypo>
             <ContentInputWrapper>
-              <ContentInput placeholder="목적지를 입력해주세요." />
+              <ContentSelect
+                showSearch
+                placeholder="배달 받을 건물을 선택해주세요."
+                options={[
+                  { label: '신공학관', value: '신공학관' },
+                  { label: '혜화관', value: '혜화관' },
+                  { label: '법학관', value: '법학관' },
+                  { label: '정보문화관', value: '정보문화관' },
+                  { label: '원흥관', value: '원흥관' },
+                ]}
+              />
+            </ContentInputWrapper>
+            <ContentInputWrapper>
+              <ContentInput placeholder="세부 사항을 입력해주세요." />
             </ContentInputWrapper>
           </ContentInputContainer>
           <ContentInputContainer>
