@@ -2,6 +2,7 @@ import { Root } from 'components/Root'
 import { TabBar } from 'components/TabBar'
 import { STORE_LIST } from 'constants/system/store'
 import { FC } from 'react'
+import { useNavigate } from 'react-router-dom'
 import {
   Container,
   ContentButton,
@@ -25,6 +26,12 @@ type RequestInfoPageProps = {
 }
 
 export const RequestInfoPage: FC<RequestInfoPageProps> = ({ className }) => {
+  const navigate = useNavigate()
+
+  const onClickSubmitButton = () => {
+    navigate('/request/complete')
+  }
+
   return (
     <Root className={className}>
       <Container>
@@ -77,6 +84,22 @@ export const RequestInfoPage: FC<RequestInfoPageProps> = ({ className }) => {
             </ContentInputWrapper>
           </ContentInputContainer>
           <ContentInputContainer>
+            <ContentInputTitleTypo>상품 금액</ContentInputTitleTypo>
+            <ContentInputWrapper>
+              <ContentSelect
+                showSearch
+                placeholder="상품 금액을 선택해주세요."
+                options={[
+                  { label: '1,000원', value: '1,000원' },
+                  { label: '1,500원', value: '1,500원' },
+                  { label: '2,000원', value: '2,000원' },
+                  { label: '2,500원', value: '2,500원' },
+                  { label: '3,000원', value: '3,000원' },
+                ]}
+              />
+            </ContentInputWrapper>
+          </ContentInputContainer>
+          <ContentInputContainer>
             <ContentInputTitleTypo>배달 금액</ContentInputTitleTypo>
             <ContentInputWrapper>
               <ContentSelect
@@ -98,7 +121,7 @@ export const RequestInfoPage: FC<RequestInfoPageProps> = ({ className }) => {
               <ContentTextArea placeholder="기타 요청사항을 입력해주세요." autoSize={{ minRows: 2, maxRows: 3 }} />
             </ContentInputWrapper>
           </ContentInputContainer>
-          <ContentButton type={'primary'} size={'large'}>
+          <ContentButton type={'primary'} size={'large'} onClick={onClickSubmitButton}>
             요청하기
           </ContentButton>
         </ContentContainer>
