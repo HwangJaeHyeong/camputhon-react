@@ -13,7 +13,7 @@ export const MainPage: FC<MainPageProps> = ({ className }) => {
   const { isLogin } = useUserProfile()
 
   useEffect(() => {
-    if (!isLogin) {
+    if (isLogin === false) {
       navigate('/user/login')
     }
   }, [])

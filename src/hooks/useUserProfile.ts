@@ -10,9 +10,9 @@ type UseUserProfileType = {
 }
 
 export const useUserProfile = (): UseUserProfileType => {
-  const accessToken = localStorage.getItem('') ?? ''
+  const accessToken = localStorage.getItem(LOCAL_ACCESS_TOKEN) ?? 'INITIAL'
 
-  const isLogin = accessToken !== ''
+  const isLogin = accessToken !== 'INITIAL'
 
   const setAccessToken = (value: string) => {
     localStorage.setItem(LOCAL_ACCESS_TOKEN, value)
