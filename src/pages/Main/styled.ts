@@ -1,6 +1,17 @@
-import { Avatar, Button, Input, Typography } from 'antd'
-import { PRIMARY_COLOR } from 'constants/system/default'
+import { Typography } from 'antd'
 import styled from 'styled-components'
+
+export const Container = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+`
+
+export const TitleTypoWrapper = styled.div`
+  width: 100%;
+  padding: 0 20px;
+`
 
 export const TitleTypo = styled(Typography)`
   font-size: 24px;
@@ -10,27 +21,3 @@ export const TitleTypo = styled(Typography)`
   letter-spacing: -1px;
   margin-top: 10px;
 `
-
-export const LogoWrapper = styled(Avatar)`
-  width: 150px;
-  height: 150px;
-  background: ${PRIMARY_COLOR};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-`
-
-export const ContentContainer = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 20px;
-  box-sizing: border-box;
-  margin-top: 40px;
-`
-
-export const ContentInput = styled(Input)``
-
-export const SubmitButton = styled(Button)``
