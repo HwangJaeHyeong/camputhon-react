@@ -10,7 +10,7 @@ export const Container = styled.div`
   padding-bottom: 40px;
 `
 export const TitleTypo = styled(Typography)`
-  font-size: 40px;
+  font-size: 24px;
   font-weight: bold;
   color: #333;
   line-height: 120%;
