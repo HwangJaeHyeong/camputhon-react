@@ -15,7 +15,7 @@ export const LogoImgWrapper = styled.div`
 `
 
 export const LogoImg = styled.img`
-  width: 320px;
+  width: 300px;
 `
 
 export const ContentContainer = styled.div`
@@ -34,6 +34,7 @@ export const ContentElementContainer = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
+  margin-top: -20px;
 `
 
 export const ContentElement01Img = styled.img`
