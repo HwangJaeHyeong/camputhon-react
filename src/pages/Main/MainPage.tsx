@@ -9,8 +9,11 @@ export const MainPage: FC<MainPageProps> = ({ className }) => {
   return (
     <Root className={className}>
       <Container>
-        <LogoWrapper>로고 사진</LogoWrapper>
-        <TitleTypo>우리끼리 딜리버리</TitleTypo>
+        <LogoWrapper>
+          <TitleTypo>
+            우리끼리 <br /> 딜리버리
+          </TitleTypo>
+        </LogoWrapper>
         <ContentContainer>
           <ContentInput placeholder="아이디를 입력해주세요." />
           <ContentInput placeholder="비밀번호를 입력해주세요." />

@@ -24,6 +24,10 @@ export const Container = styled.div`
 export const TitleTypo = styled(Typography)`
   font-size: 24px;
   font-weight: bold;
+  color: #333;
+  line-height: 120%;
+  letter-spacing: -1px;
+  margin-top: 10px;
 `
 
 export const LogoWrapper = styled(Avatar)`
@@ -41,9 +45,9 @@ export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 40px;
   padding: 20px;
   box-sizing: border-box;
+  margin-top: 40px;
 `
 
 export const ContentInput = styled(Input)``

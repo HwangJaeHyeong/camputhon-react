@@ -12,6 +12,7 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 const theme = {
   token: {
     colorPrimary: PRIMARY_COLOR,
+    fontFamily: 'Jua, sans-serif',
   },
 }
 
