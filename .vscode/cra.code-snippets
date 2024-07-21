@@ -4,7 +4,7 @@
     "prefix": "rfc",
     "body": [
       "import { FC } from 'react'",
-      "import { Root } from './styled'",
+      "import { Root } from 'components/Root'",
       "",
       "type ${TM_FILENAME_BASE}$1Props = {",
       "  className?: string",
